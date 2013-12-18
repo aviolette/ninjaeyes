@@ -14,7 +14,6 @@ var appKey = process.argv[2],
   GREEN = '00FF00',
   RED = 'FF0000';
 
-
 /**
  * Requests current truck-stop data from Chicago Food Truck Finder and invokes the callback with the results.
  */
@@ -40,7 +39,6 @@ function requestFoodTruckData(callback) {
  */
 function setColor(color) {
   var req = https.request({hostname : 'api.ninja.is', method: 'PUT', path: '/rest/v0/device/'+ deviceId + '?user_access_token=' + ninjaKey}, function(res) {
-
   });
 
   var body = {
