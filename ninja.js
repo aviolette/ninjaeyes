@@ -38,8 +38,9 @@ function requestFoodTruckData(callback) {
  * Sets the color on the ninja block eyes.
  */
 function setColor(color) {
-  var req = https.request({hostname : 'api.ninja.is', headers: {"content-type" : "application/json" }, method: 'PUT', path: '/rest/v0/device/'+ deviceId + '?user_access_token=' + ninjaKey}, function(res) {
-  });
+  var req = https.request({hostname : 'api.ninja.is', 
+    headers: {"content-type" : "application/json" }, 
+    method: 'PUT', path: '/rest/v0/device/'+ deviceId + '?user_access_token=' + ninjaKey}, function(res) {});
 
   var body = {
     "DA" : color
